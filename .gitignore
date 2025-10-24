@@ -1,0 +1,108 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+
+# ----------------------------
+# Symfony framework / PHP
+# ----------------------------
+/vendor/
+/var/
+/public/bundles/
+/config/secrets/prod/prod.decrypt.private.php
+
+# Environment files (do not commit secrets)
+.env
+.env.local
+.env.*.local
+.env.test
+.env.dev
+.env.backup
+.env.*     # catch any new env variants
+
+# Logs
+*.log
+
+# ----------------------------
+# PHPUnit
+# ----------------------------
+/phpunit.xml
+/.phpunit.cache/
+
+# ----------------------------
+# Symfony Asset Mapper / Node
+# ----------------------------
+/public/assets/
+/assets/vendor/
+/node_modules/
+
+# ----------------------------
+# Cache / temporary files
+# ----------------------------
+/cache/
+.tmp/
+*.tmp
+*.swp
+
+# ----------------------------
+# Build outputs
+# ----------------------------
+/dist/
+public/build/
+
+# ----------------------------
+# IDE / editors
+# ----------------------------
+.idea/
+*.iml
+
+# ----------------------------
+# macOS system files
+# ----------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# ----------------------------
+# OS backups / miscellaneous
+# ----------------------------
+*.bak
+*.orig
+
+# ----------------------------
+# Upload folder
+# ----------------------------
+# Ignore all contents inside upload folder, but keep the folder itself
+/uploads/*
+!/uploads/.gitkeep
+
+# Project exclude paths
+/storage/app/
+/storage/framework/
