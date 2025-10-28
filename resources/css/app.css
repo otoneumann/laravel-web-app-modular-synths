@@ -1,11 +1,33 @@
 @import 'tailwindcss';
 
+/* Source references (optional for editor) */
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* Theme font */
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Outer container transparent */
+.container.py-5 {
+    background-color: transparent !important;
+}
+
+/* Make module cards semi-transparent, leaving content readable */
+.container .row .col-md-6 .card {
+    background-color: rgba(255, 255, 255, 0.8); /* white with 80% opacity */
+    backdrop-filter: blur(4px); /* optional: blur behind */
+    border: none; /* optional: remove border for cleaner look */
+}
+
+/* Optional: body background */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: var(--font-sans), serif;
 }
