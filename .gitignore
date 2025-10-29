@@ -39,6 +39,7 @@ Thumbs.db
 .env.test
 .env.dev
 .env.backup
+.env.docker
 .env.*     # catch any new env variants
 
 # Logs
