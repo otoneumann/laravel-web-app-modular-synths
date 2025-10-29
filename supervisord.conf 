@@ -2,13 +2,13 @@
 nodaemon=true
 
 [program:php-fpm]
-command=/usr/local/sbin/php-fpm -F
-autostart=true
+command=docker-php-entrypoint php-fpm
 autorestart=true
-priority=5
+stdout_logfile=/var/log/php-fpm.log
+stderr_logfile=/var/log/php-fpm.err
 
 [program:nginx]
-command=nginx -g "daemon off;"
-autostart=true
+command=/usr/sbin/nginx -g "daemon off;"
 autorestart=true
-priority=10
+stdout_logfile=/var/log/nginx.log
+stderr_logfile=/var/log/nginx.err
