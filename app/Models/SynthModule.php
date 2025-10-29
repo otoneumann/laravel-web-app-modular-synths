@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class SynthModule extends Model
 {
-    protected $fillable = ['name', 'description', 'image_url', 'api_id'];
+    protected $fillable = [
+        'name',
+        'description',
+        'image_url',
+        'image_path',
+        'api_id',
+    ];
 }
