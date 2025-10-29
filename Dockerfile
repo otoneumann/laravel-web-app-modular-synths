@@ -21,17 +21,17 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Copy config files (paths must match your project)
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-# Copy all project files
+# Copy project files
 COPY . .
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
 
-EXPOSE 80
+# Configure Nginx for Railway
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
+# Expose Railway port
+EXPOSE $PORT
 
 # Start Nginx & PHP-FPM via Supervisor
 CMD ["/usr/bin/supervisord", "-n"]
